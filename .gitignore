@@ -4,3 +4,4 @@ node_modules
 wrangler.toml
 build
 dist
+workers-site
