@@ -2,7 +2,7 @@
 
 A simple poll box that you can use on your website, developed using React. Inspired by IGN's poll box design.
 
-[Live demo](https://www.brendandebusk.com)
+[Live demo](https://poll-box.brendan-debusk.workers.dev/)
 
 ## Installation
 
