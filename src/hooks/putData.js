@@ -3,10 +3,12 @@ export async function putData(objectID, objectVotes) {
     option_votes: objectVotes,
   });
 
+   //highly recommended that you use a backend to manage calling your poll database
+
   const fetchOptions = {
     method: "PUT",
     headers: {
-      "x-apikey": "6427828b39cf552ef728bf4b",
+      "x-apikey": "[API KEY HERE]",
       "Content-Type" : "application/json"
     },
     body: formattedData,
@@ -16,7 +18,7 @@ export async function putData(objectID, objectVotes) {
   console.log("posting data to database");
 
   await fetch(
-    `https://ignpoll-a34d.restdb.io/rest/polloptions/${objectID}`,
+    `[URL/${objectID}]`,
     fetchOptions
   );
 }

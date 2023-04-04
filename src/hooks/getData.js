@@ -1,20 +1,22 @@
 export async function getData() {
   console.log("getting initial data");
 
+  //highly recommended that you use a backend to manage calling your poll database
+
   const fetchOptions = {
     method: "GET",
     async: true,
     crossDomain: true,
     cache: "no-store",
     headers: {
-      "x-apikey": "6427828b39cf552ef728bf4b",
+      "x-apikey": "[API KEY HERE]",
       "Content-Type" : "application/json"
     }
   };
 
   try {
   const pollQuestionsFetch = await fetch(
-    "https://ignpoll-a34d.restdb.io/rest/pollquestions",
+    "[URL HERE]",
     fetchOptions
   );
 
@@ -25,7 +27,7 @@ export async function getData() {
   const pollQuestionsResponse = await pollQuestionsFetch.json();
 
   const pollOptionsFetch = await fetch(
-    "https://ignpoll-a34d.restdb.io/rest/polloptions",
+    "[URL HERE]",
     fetchOptions
   );
   const pollOptionsResponse = await pollOptionsFetch.json();

@@ -24,8 +24,8 @@ html,
   align-items: flex-start;
   justify-content: center;
   background-color: #43475a;
-  width: 100%;
-  max-width: 60vw;
+  width: 60vw;
+  max-width: 700px;
   padding: 30px;
   font-weight: 600;
   font-size: 25px;
