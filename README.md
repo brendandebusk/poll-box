@@ -6,7 +6,7 @@ A simple poll box that you can use on your website, developed using React. Inspi
 
 ## Coming Soon
 
-* Prevention of multiple submission from same user
+* Prevention of multiple submissions from single user
 
 ## Installation
 
