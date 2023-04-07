@@ -4,6 +4,10 @@ A simple poll box that you can use on your website, developed using React. Inspi
 
 [Live demo](https://poll-box.brendan-debusk.workers.dev/)
 
+## Coming Soon
+
+* Prevention of multiple submissions from single user
+
 ## Installation
 
 To add poll box to your component:
