@@ -1,24 +1,28 @@
 export async function putData(objectID, objectVotes) {
-  const formattedData = JSON.stringify({
-    option_votes: objectVotes,
-  });
-
-   //highly recommended that you use a backend to manage calling your poll database
+  const data = {
+    objectID: objectID,
+    objectVotes: objectVotes,
+  };
+  const formattedData = JSON.stringify(data);
 
   const fetchOptions = {
     method: "PUT",
+    async: true,
+    crossDomain: true,
+    cache: "no-store",
     headers: {
-      "x-apikey": "[API KEY HERE]",
-      "Content-Type" : "application/json"
     },
-    body: formattedData,
-    redirect: "follow"
+    body: formattedData
   };
 
   console.log("posting data to database");
 
-  await fetch(
-    `[URL/${objectID}]`,
+  const response = await fetch(
+    `https://zlkp028ki7.execute-api.us-east-1.amazonaws.com/default/pollPUT`,
     fetchOptions
   );
+
+  if (!response.ok) {
+    console.log(response.status)
+  }
 }

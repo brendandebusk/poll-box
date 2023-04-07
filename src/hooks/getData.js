@@ -1,39 +1,33 @@
 export async function getData() {
   console.log("getting initial data");
 
-  //highly recommended that you use a backend to manage calling your poll database
-
   const fetchOptions = {
     method: "GET",
     async: true,
     crossDomain: true,
     cache: "no-store",
     headers: {
-      "x-apikey": "[API KEY HERE]",
-      "Content-Type" : "application/json"
-    }
+    },
   };
 
   try {
-  const pollQuestionsFetch = await fetch(
-    "[URL HERE]",
-    fetchOptions
-  );
+    const dataFetch = await fetch(
+      "https://nqc82srum2.execute-api.us-east-1.amazonaws.com/default/pollGET",
+      fetchOptions
+    );
 
-  if (!pollQuestionsFetch.ok) {
-    throw new Error(`Error: ${pollQuestionsFetch.status}`)
-  }
+    if (!dataFetch.ok) {
+      throw new Error(`Error: ${dataFetch.status}`);
+    }
 
-  const pollQuestionsResponse = await pollQuestionsFetch.json();
+    const dataFetchJson = await dataFetch.json();
+    const questions = dataFetchJson.questions;
+    const options = dataFetchJson.options;
 
-  const pollOptionsFetch = await fetch(
-    "[URL HERE]",
-    fetchOptions
-  );
-  const pollOptionsResponse = await pollOptionsFetch.json();
+    return { questions, options }
 
-  return { pollQuestionsResponse, pollOptionsResponse };
   } catch (error) {
-    console.log(error)
+    console.log(error);
+    throw new Error(`Error: ${error}`);
   }
 }

@@ -14,7 +14,8 @@
     "react-spinners": "^0.13.8",
     "react-transition-group": "^4.4.5",
     "sandbox": "^0.8.6",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "wrangler": "^2.14.0"
   },
   "scripts": {
     "start": "react-scripts start",

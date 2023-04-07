@@ -12,14 +12,14 @@ const PollContainer = (props) => {
   const [error, setError] = useState(false);
 
   const parseData = useCallback(() => {
-    data.current.pollQuestionsResponse.forEach((v) => {
+    data.current.questions.forEach((v) => {
       if (v.poll_id === props.pollID) {
         pollQuestion.current = v.poll_question;
         return;
       }
     });
 
-    data.current.pollOptionsResponse.forEach((v) => {
+    data.current.options.forEach((v) => {
       if (v.poll_id === props.pollID) {
         pollOptions.current.push(v);
         return;
