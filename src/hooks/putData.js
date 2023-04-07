@@ -18,7 +18,7 @@ export async function putData(objectID, objectVotes) {
   console.log("posting data to database");
 
   const response = await fetch(
-    `https://zlkp028ki7.execute-api.us-east-1.amazonaws.com/default/pollPUT`,
+    `[URL]`,
     fetchOptions
   );
 

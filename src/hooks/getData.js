@@ -12,7 +12,7 @@ export async function getData() {
 
   try {
     const dataFetch = await fetch(
-      "https://nqc82srum2.execute-api.us-east-1.amazonaws.com/default/pollGET",
+      "[URL]",
       fetchOptions
     );
 
